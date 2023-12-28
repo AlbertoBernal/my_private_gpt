@@ -1,0 +1,9 @@
+0) Dividir el texto en trozos 
+1) Tengo que preprocesar el texto de entrada. Lo mejor seria dividir el texto en frases (cualquier texto entre puntos o punto y linea en blanco) para no perder informacion - DONE
+2) Intentar procesar los resumenes en paralelo
+3) Arreglar el problema : cuando la carpeta db tiene los vectores guardados no se procesa el texto de nuevo, SOLUCION: se podria guardar los chunks mas relevantes usando pickle y cargarlos sin necesidad de procesar todos los textos de nuevo - DONE
+4) DONE ver en que orden se cargan los PDFs y asegurarse de que ,por ejemplo, Tema_1.pdf y Tema_2.pdf se cargan en el orden correcto (primero Tem1 y despues Tema2). A lo mejor hay que hacer un prepend de 1_Tema1.pdf ... 2_Tema2.pdf y posteriormente hacer un sort de los nombres de los PDFs
+5) Intentar sacar informacion de los PDFs , procesar las imagenes haciendo que una IA te describa las imagenes. A lo mejor es bueno incluir esas descripciones en el resumen o Directamente incluir las imagenes si hay un texto que se parezca en el resumen al texto con el que la IA describe las imagenes
+6) Ver la distancia entre clusters del Kmeans, y ademas ver como de dispersos estan los puntos dentro de un cluster para saber si hay muchos capitulos redundantes o no (si los datos dentro de un cluster estan muy dispersos (poco agrupados) sera que hay poca similitud entre ellos y que debo aumentar el numero de Klusters)
+7) Preprocesar algunos textos PDF que tengan cabecera o pie de pagina porque se repite y no aporta valor
+8) Guardar los ficheros binarios *.plk en una carpeta y ademas un fichero json o yaml con los parametros usados (contexto, modelo LLM, ...)
